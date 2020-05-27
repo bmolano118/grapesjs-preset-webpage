@@ -98,6 +98,7 @@ export default (editor, config) => {
   });
   panels.push({
     id: "views",
+    preSpace: 1,
     buttons: [
       {
         id: obl,
@@ -116,20 +117,27 @@ export default (editor, config) => {
         command: osm,
         active: true,
         className: "",
-        label: "Style",
+        label: "Body",
       },
-      {
-        id: otm,
-        command: otm,
-        className: "",
-        label: "Trait",
-      },
-      {
-        id: ola,
-        command: ola,
-        className: "",
-        label: "Layout",
-      },
+      // {
+      //   id: osm,
+      //   command: osm,
+      //   active: true,
+      //   className: "",
+      //   label: "Style",
+      // },
+      // {
+      //   id: otm,
+      //   command: otm,
+      //   className: "",
+      //   label: "Trait",
+      // },
+      // {
+      //   id: ola,
+      //   command: ola,
+      //   className: "",
+      //   label: "Layout",
+      // },
     ],
   });
   pn.getPanels().reset(panels);

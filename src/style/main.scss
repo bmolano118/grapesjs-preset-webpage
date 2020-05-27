@@ -1,3 +1,22 @@
 @import "variables.scss";
 @import "_gjs_panels.scss";
 @import "_gjs_canvas.scss";
+
+.#{$app-prefix} {
+    @each $cnum, $ccol in (one, $primaryColor), (two, $secondaryColor), (three, $tertiaryColor), (four, $quaternaryColor) {
+      &#{$cnum} {
+        &-bg {
+          background-color: $ccol;
+        }
+  
+        &-color {
+          color: $ccol;
+  
+          &-h:hover {
+            color: $ccol;
+          }
+        }
+      }
+    }
+  }
+  
